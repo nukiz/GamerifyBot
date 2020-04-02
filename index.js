@@ -7,7 +7,7 @@ const prefix = '?';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
-    bot.user.setActivity('your server!', { type: 'WATCHING'}).catch(console.error);
+    bot.user.setActivity('your server!', { type: 'WATCHING'}).catch(console.error); //change how you please
 })
 
 bot.on('message', message=>{
@@ -23,9 +23,9 @@ bot.on('message', message=>{
             break;
         case 'info':
             if(args[1] === 'version'){
-                message.channel.send('Version 1.1.0 maintained by nukiz#8892'); //don't change this, please
+                message.channel.send('Version 1.1.0 maintained by community, mainly by nukiz#0001'); //don't change this, please
             }else{
-                message.channel.send('GamerifyBot by nukiz#8892') //dont change this, please
+                message.channel.send('GamerifyBot by nukiz#0001') //dont change this, please
             }
             break;
         case 'gamer':
