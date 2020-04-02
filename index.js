@@ -1,13 +1,13 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client();
 
-const token ='Njg1NzYwMTYwMTE1MDY0OTIy.XmS6qQ.Bu4AUB_vMJij1cY-mVig63JFgNc';
+const token ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; //add your own token
 
 const prefix = '?';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
-    bot.user.setActivity('over nukiz cave!', { type: 'WATCHING'}).catch(console.error);
+    bot.user.setActivity('your server!', { type: 'WATCHING'}).catch(console.error);
 })
 
 bot.on('message', message=>{
@@ -19,13 +19,13 @@ bot.on('message', message=>{
             message.channel.send('pong!')
             break;
         case 'youtube':
-            message.channel.send('https://www.youtube.com/channel/UCy3_nwmDwR8wE70ushMszFQ < i was made by this guy!')
+            message.channel.send('XXXXXXXXXXXXXXXXXXX') //place own yt channel in here
             break;
         case 'info':
             if(args[1] === 'version'){
-                message.channel.send('Version 1.1.0 maintained by nukiz#8892');
+                message.channel.send('Version 1.1.0 maintained by nukiz#8892'); //don't change this, please
             }else{
-                message.channel.send('GamerifyBot by nukiz#8892')
+                message.channel.send('GamerifyBot by nukiz#8892') //dont change this, please
             }
             break;
         case 'gamer':
