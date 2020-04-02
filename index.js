@@ -39,7 +39,7 @@ bot.on('message', message=>{
             message.reply('Why would you ever use this command? Its literally nothing.')
             break;
         case 'server':
-            message.channel.send('play.hyperlandsmc.net;19132')
+            message.channel.send('play.hyperlandsmc.net;19132') // change to whatever server you want, this is for mcpe
             break;
         case 'secret':
             message.channel.send('Yeah, you found out. Nukiz is a lazy b.')
@@ -49,8 +49,10 @@ bot.on('message', message=>{
             break;  
         case 'lol':
             message.channel.send('Imagine using the "lol" command.')
-            break;       
-   
+            break;
+        case 'nuke':
+            message.channel.bulkDelete(100000000) //doesnt work for ultra-big servers
+            message.channel.send('Succesfully nuked channel!')
     });
         
 bot.login(token);
