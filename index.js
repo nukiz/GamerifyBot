@@ -45,7 +45,7 @@ bot.on('message', message=>{
             message.channel.send('Yeah, you found out. Nukiz is a lazy b.')
             break;
         case 'github':
-            message.channel.send('GitHub Closed for now, atleast.')
+            message.channel.send('https://github.com/nukiz/GamerifyBot/') // please don't change github, if you do, credit me for this code in a separate command or something
             break;  
         case 'lol':
             message.channel.send('Imagine using the "lol" command.')
@@ -53,6 +53,7 @@ bot.on('message', message=>{
         case 'nuke':
             message.channel.bulkDelete(100000000) //doesnt work for ultra-big servers
             message.channel.send('Succesfully nuked channel!')
+            break;
     });
         
 bot.login(token);
