@@ -1,13 +1,13 @@
-# Alert, read me.
-Development dropped by author.
+# Rewrite
+Bot is currently being rewritten and refactored because im simply bored. The pandemic closed everything.
 
 # GamerifyBot
-an Discord Bot made for a dead-ass discord server. (note: this bot was made for fun, and is not meant to be used in bigger servers. This bot is very messy and bad, and is on the development stage.)
+This bot is currently being rewritten! Help me if you can, next commit i will work on refactoring the commands instead of shoving everything in index lmfao.
 
-This bot was made with fun in mind, the bot doesnt work anymore, etc.
+Originally, the bot was meant for my own discord. It died out, and now this serves no purpose. Lol. Sad life.
 
 # Info
-This bot is made in DiscordJS and for fun. I was bored, and decided to make a bot, so this isnt probably that bad. Only issue, it doesnt work.
+Bot made in Discord.js - possibly converted to Python later, but currently rewriting in JS! Yayy! No. Not yay. Its a pain in the ass.
 
 # How to setup
 Simply, go to the Discord developer portal and make a new application. Take a bot-token and use it in the code to control the bot.
