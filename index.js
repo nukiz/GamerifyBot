@@ -1,13 +1,10 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client();
-
-const token ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; //add your own token
-
-const prefix = '?';
+const prefix = 'n!';
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
-    bot.user.setActivity('your server!', { type: 'WATCHING'}).catch(console.error); //change how you please
+    bot.user.setActivity('${guild.name}', { type: 'WATCHING'}).catch(console.error); //change how you please
 })
 
 bot.on('message', message=>{
@@ -15,8 +12,13 @@ bot.on('message', message=>{
     let args = message.content.substring(prefix.length).split(" ")
 
     switch(args[0]){
-        case 'ping':
-            message.channel.send('pong!')
+        case 'help':
+            message.channel.send('GamerifyRewrite :-: ')
+            message.channel.send('Commands Available: 10')
+            message.channel.send('Prefix: n!')
+            message.channel.send('Server: ${guild.name}')
+            message.channel.send('Latency: ${Date.now() - message.createdTimestamp}ms.')
+            message.channel.send('API Latency: ${Math.round(client.ws.ping)}ms')
             break;
         case 'youtube':
             message.channel.send('XXXXXXXXXXXXXXXXXXX') //place own yt channel in here
@@ -32,27 +34,29 @@ bot.on('message', message=>{
             message.reply('You are a gamer, as you are here!')
             break;
         case 'clear':
-            if(!args[1]) return message.reply('Error! Please tell me how many messages to delete!')
+            if(!args[1]) return message.reply('Idiot. Tell me the messages to delete.')
             message.channel.bulkDelete(args[1]);
             break;
         case 'nothing':
             message.reply('Why would you ever use this command? Its literally nothing.')
             break;
-        case 'server':
-            message.channel.send('play.hyperlandsmc.net;19132') // change to whatever server you want, this is for mcpe
-            break;
         case 'secret':
             message.channel.send('Yeah, you found out. Nukiz is a lazy b.')
             break;
-        case 'github':
-            message.channel.send('https://github.com/nukiz/GamerifyBot/') // please don't change github, if you do, credit me for this code in a separate command or something
+        case 'sourcecode':
+            message.channel.send('**GamerifyRewrite made by yours truly**')
+            message.channel.send('https://github.com/nukiz/GamerifyBot/')
             break;  
-        case 'lol':
-            message.channel.send('Imagine using the "lol" command.')
+        case 'imagine':
+            message.channel.send('LOL IMAGINE BEING SO DUMB YOU ACTUALLY DO THAT LMFAO')
             break;
         case 'nuke':
-            message.channel.bulkDelete(100000000) //doesnt work for ultra-big servers
-            message.channel.send('Succesfully nuked channel!')
+            if (!message.member.hasPermission('ADMINISTRATOR')) { // rewrite :)
+            message.channel.send('Dumb retard. You dont have perms.')
+            } else {
+             message.channel.clone().then(msg => msg.send('Channel destroyed succesfully. No damage caused.'))
+             message.channel.delete()   
+            }
             break;
     });
         
